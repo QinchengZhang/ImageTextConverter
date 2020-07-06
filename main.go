@@ -9,12 +9,13 @@ package main
 
 import (
 	image2text "ImageTextConverter/Image2Text"
+	"ImageTextConverter/Text2Image"
 	"fmt"
 	"os"
 )
 
 func main() {
-	var file, err = os.Open("img/llzjpbm.png")
+	var file, err = os.Open("img/test.png")
 	if err != nil {
 		fmt.Println("File open error: ", err)
 		return
@@ -26,15 +27,15 @@ func main() {
 		return
 	}
 
-	//var file, err = os.Open("text/六零之极品爸妈.txt")
-	//if err != nil {
-	//	fmt.Println("File open error: ", err)
-	//	return
-	//}
-	//defer file.Close()
-	//err = Text2Image.Convert2Image(file, "img/llzjpbm.png")
-	//if err != nil {
-	//	fmt.Println("Image convert error: ", err)
-	//	return
-	//}
+	var file, err = os.Open("text/test.txt")
+	if err != nil {
+		fmt.Println("File open error: ", err)
+		return
+	}
+	defer file.Close()
+	err = Text2Image.Convert2Image(file, "img/test.png")
+	if err != nil {
+		fmt.Println("Image convert error: ", err)
+		return
+	}
 }
