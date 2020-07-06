@@ -3,7 +3,7 @@
 
 A text file(sunch as novel) convert to a png file like this
 
-![test](https://github.com/zqc970816/ImageTextConverter/blob/master/img/test.png?raw=true)
+![test](https://github.com/zqc970816/ImageTextConverter/blob/master/img/test.png)
 
 ### example:
 
