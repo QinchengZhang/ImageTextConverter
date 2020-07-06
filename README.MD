@@ -3,7 +3,7 @@
 
 A text file(sunch as novel) convert to a png file like this
 
-![test](E:\WorkSpaces\GoWorkSpace\src\ImageTextConverter\img\test.png)
+![test](.\img\test.png)
 
 ### example:
 
