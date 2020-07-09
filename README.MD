@@ -164,3 +164,6 @@ func main() {
 fyne package -os windows -icon icon.png
 ```
 
+* 注：若要显示中文，需设置FYNE_FONT环境变量，值为.ttf格式字体的路径
+
+  eg：E:\DirName\simhei.ttf
