@@ -7,7 +7,9 @@
  */
 package main
 
-import "ImageTextConverter/GUI"
+import (
+	"ImageTextConverter/GUI"
+)
 
 func main() {
 	myapp := GUI.NewApp()

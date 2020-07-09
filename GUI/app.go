@@ -30,13 +30,11 @@ func openfile(parent *fyne.Window, fileType int) func() {
 	return func() {
 		var uri string
 		myDialog := dialog.NewFileOpen(func(url fyne.URIReadCloser, err error) {
-			fmt.Println(url)
 			if url != nil {
 				uri = url.URI().String()
 				wholepath := strings.Split(uri, "//")[1]
 				path := wholepath[:strings.LastIndex(wholepath, `\`)]
 				filename := strings.Split(wholepath[strings.LastIndex(wholepath, `\`)+1:], ".")[0]
-				fmt.Println(path, filename)
 				var err error
 				switch fileType {
 				case 0:
@@ -54,10 +52,6 @@ func openfile(parent *fyne.Window, fileType int) func() {
 		myDialog.SetDismissText("Choose a txt file to convert")
 		FilterArray := map[int][]string{0: []string{".png"}, 1: []string{".txt"}}
 		myDialog.SetFilter(storage.NewExtensionFileFilter(FilterArray[fileType]))
-		//myDialog.SetOnClosed(func(){
-		//	fmt.Println("test")
-		//	//*parent.
-		//})
 		myDialog.Show()
 	}
 }
