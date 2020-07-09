@@ -10,6 +10,14 @@ import (
 	"os"
 )
 
+func PathConvert2Image(textpath string, imagepath string) error {
+	text, err := os.Open(textpath)
+	if err != nil {
+		return err
+	}
+	return Convert2Image(text, imagepath)
+}
+
 func Convert2Image(text *os.File, filepath string) error {
 	img, err := Convert(text)
 	if err != nil {

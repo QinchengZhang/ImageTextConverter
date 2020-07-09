@@ -16,6 +16,14 @@ import (
 	"strings"
 )
 
+func PathConvert2Text(imagepath string, textpath string) error {
+	image, err := os.Open(imagepath)
+	if err != nil {
+		return err
+	}
+	return Convert2Text(image, textpath)
+}
+
 func Convert2Text(image *os.File, filepath string) error {
 	str, err := Convert(image)
 	if err != nil {
